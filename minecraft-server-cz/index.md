@@ -17,7 +17,7 @@ Minecraft serveru je třeba udělat složku a do ní je třeba stáhnout hlavní
 \- Některé bugfixy, které Paper zavedl mohou být nechtěné<br>
 **Stažení: https://papermc.io/downloads/paper**
 ### C. Modovaný server
-#### Komunitou upravěný Minecraft server tak, aby podporoval mody.
+#### Komunitou upravený Minecraft server tak, aby podporoval mody.
 Software, který umožňuje použití modů se nazývá mod loader. Mod loaderů je více, velké a používané mod loadery jsou v zásadě dva. Mody jsou psané vždy jen na jeden mod loader a nedají se mezi sebou míchat (např. mody pro Fabric nefungují na NeoForge atd.)
 #### [Fabric Loader](https://fabricmc.net)
 Stažení klient: https://fabricmc.net/use/installer/
@@ -27,7 +27,7 @@ Stažení klient + server: https://projects.neoforged.net/neoforged/neoforge
 
 Tento tutoriál se modům věnuje velmi málo a doporučuji si o nich nastudovat více předtím, než se do toho vrhnete.
 
-# 3. Vytvoření starovacích bash scriptů
+# 3. Vytvoření startovacích bash scriptů
 Do složky našeho Minecraft serveru je třeba udělat dva scripty, které budou startovat Minecraft server. Aby Minecraft server běžel i bez otevřeného terminálu je potřeba nainstalovat screen (`sudo apt install screen`). 
 
 `start.sh` - script, který nastartuje Minecraft server
@@ -44,7 +44,7 @@ java -Xms${RAM} -Xmx${RAM} -jar ${JAR} nogui
 #!/bin/bash
 
 # -d -m    = nastartuje screen v odpojeném modu
-# -S       = název screen
+# -S       = název screen procesu
 screen -d -m -S "Minecraft Server" ./start.sh
 ```
 
@@ -77,9 +77,9 @@ Server, který právě vznikl není bezpečný. Používá defaultní Minecraft 
 První start serveru vygeneruje hromadu souborů včetně `minecraft.properties`, kde se nachází hlavní nastavení serveru. Zde je třeba změnit `server-port` na jinou hodnotu, aby Minecraft server nebyl tak lehce odhalitelný.
 
 Taky je potřeba zapnout [whitelist](https://minecraft.wiki/w/Commands/whitelist). Whitelist omezí kteří hráči se na server mohou připojit.
-Zapnutí whitelistu (v konzoli zapnutého Minecraft serveru)
-`whitelist on` - zapne whitelist
-`whitelist add <player name>` - přidá hráče na whitelist (jméno je case insensitive)
+Zapnutí whitelistu (v konzoli zapnutého Minecraft serveru)<br>
+`whitelist on` - zapne whitelist<br>
+`whitelist add <player name>` - přidá hráče na whitelist (jméno je case insensitive)<br>
 
 # 7. Screen
 Minecraft server pod screen se nastartuje pomocí `./screen-start.sh`.
@@ -100,6 +100,6 @@ Pluginem jde upravit třeba jaký item vypadne z blocku, nebo co vypadne z pří
 Pokud hráč chce používat příkazy (=commandy, cheaty), musí být operátor. To jde změnit (z konzole běžícího Minecraft serveru) příkazem `op <player name>` a `deop <player name>`. Operátorské oprávnění je ale hodně nebezpečné, (hráč) operátor má kontrolu prakticky nad celým serverem, má přístup ke všem příkazům jako Minecraft konzole (včetně whitelistu a dělání dalších operátorů). Pro podrobnější měnění oprávnění (např. přidělování jednotlivých příkazů hráčům) doporučuji mrknout na PaperMC plugin [LuckPerms](https://luckperms.net/).
 
 ### Dobré materiály
-[Minecraft Wiki: Jak si vytvořit vlastní server](https://minecraft.wiki/w/Tutorials/Setting_up_a_server)
-[Super playlist od super YouTubera jak začít s Minecraft pluginy (některé věci už jsou ale trochu starší)](https://www.youtube.com/watch?v=dem7dujCDvg&list=PLfu_Bpi_zcDNEKmR82hnbv9UxQ16nUBF7&index=3)
-[PaperMC plugin dev dokumentace](https://docs.papermc.io/paper/dev/project-setup)
+- [Minecraft Wiki: Jak si vytvořit vlastní server](https://minecraft.wiki/w/Tutorials/Setting_up_a_server)
+- [Super playlist od super YouTubera jak začít s Minecraft pluginy (některé věci už jsou ale trochu starší)](https://www.youtube.com/watch?v=dem7dujCDvg&list=PLfu_Bpi_zcDNEKmR82hnbv9UxQ16nUBF7&index=3)
+- [PaperMC plugin dev dokumentace](https://docs.papermc.io/paper/dev/project-setup)
