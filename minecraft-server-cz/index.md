@@ -1,5 +1,5 @@
 # 1. Stáhnutí Javy 21
-Všechny moderní verze Minecraftu vyžadují Javu 21, [která je zatím v balíčkách pouze pro Debian testing a unstable](https://packages.debian.org/search?searchon=sourcenames&keywords=openjdk-21). Nejjednoduší je stáhnout [Oracle Javu jako deb package](https://www.oracle.com/java/technologies/downloads/#java21), ale třeba [tento tutoriál](https://computingforgeeks.com/install-java-jdk-or-openjdk-21-on-debian/) popisuje i jak sehnat OpenJDK.
+Všechny moderní verze Minecraftu vyžadují Javu 21, [která je zatím v balíčkách pouze pro Debian testing a unstable](https://packages.debian.org/search?searchon=sourcenames&keywords=openjdk-21). Nejjednodušší je stáhnout [Oracle Javu jako deb package](https://www.oracle.com/java/technologies/downloads/#java21), ale třeba [tento tutoriál](https://computingforgeeks.com/install-java-jdk-or-openjdk-21-on-debian/) popisuje i jak sehnat OpenJDK.
 # 2. Stáhnutí Minecraft server jaru
 Minecraft serveru je třeba udělat složku a do ní je třeba stáhnout hlavní server jar.
 ### A. Oficiální Minecraft server.
