@@ -5,7 +5,7 @@ Create an emulator, root it, install the certificate and convince the emulator t
 - [Git](https://git-scm.com/downloads)
 - [Burp](https://portswigger.net/burp/releases) (or some other debugging proxy)
 # 1 Rooting the emulated device
-The device needs to be rooted to modify the system partition (and installing the certificate). This approach **does** work with Play Store images. Use the `API-31 "S" (Android 12.0)` system image for the best results.
+The device needs to be rooted to modify the system partition (and install the certificate). This approach **does** work with Play Store images. Use the `API-31 "S" (Android 12.0)` system image for the best results.
 ### 1.1.Install [rootAVD](https://gitlab.com/newbit/rootAVD)
 A utility that helps with rooting the emulated device using [Magisk](https://github.com/topjohnwu/Magisk).
 ```bash
@@ -49,7 +49,7 @@ adb push /path/to/your/certificate.der /sdcard/Download
 ```
 And then install the certificate (`Settings | Search | "CA certificate"`...)
 ### 2.4 Make a system override module
-Since Android 10.0, `/system` is mounted as read-only, that mean's that the certificate can't be just easily copied there. An adb module needs to be created and its contents will be automatically copied to `/system` during boot.
+Since Android 10.0, `/system` is mounted as read-only, that means that the certificate can't be just easily copied there. An adb module needs to be created and its contents will be automatically copied to `/system` during boot.
 ```bash
 adb shell
 su
